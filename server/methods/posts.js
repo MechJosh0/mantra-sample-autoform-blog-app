@@ -4,18 +4,17 @@ import {check} from 'meteor/check';
 
 export default function () {
   Meteor.methods({
-    'posts.create'(_id, title, content) {
+    'posts.create'(_id, forumFields) {
       check(_id, String);
-      check(title, String);
-      check(content, String);
+      check(forumFields, Object);
 
       // Demo the latency compensations (Delete this in production)
       Meteor._sleepForMs(500);
 
       // XXX: Do some user authorization
-      const createdAt = new Date();
-      const post = {_id, title, content, createdAt};
-      Posts.insert(post);
+      forumFields.createdAt = new Date();
+
+      Posts.insert({_id, ...forumFields});
     }
   });
 

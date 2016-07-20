@@ -2,18 +2,13 @@ import {check} from 'meteor/check';
 
 export default function ({Meteor, Collections}) {
   Meteor.methods({
-    'posts.create'(_id, title, content) {
+    'posts.create'(_id, forumFields) {
       check(_id, String);
-      check(title, String);
-      check(content, String);
+      check(forumFields, Object);
 
-      const createdAt = new Date();
-      const post = {
-        _id, title, content, createdAt,
-        saving: true
-      };
+      forumFields.createdAt = new Date();
 
-      Collections.Posts.insert(post);
+      Collections.Posts.insert({_id, ...forumFields});
     }
   });
 }
