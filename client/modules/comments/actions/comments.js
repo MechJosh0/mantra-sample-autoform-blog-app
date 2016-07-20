@@ -16,7 +16,7 @@ export default {
         }
       });
 
-      return LocalState.set('CREATE_COMMENT_SUBMITTED', true);
+      return;
     }
 
     return LocalState.set('CREATE_COMMENT_ERROR', invalidKeys(context));

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactAutoForm from 'meteor-react-autoform';
 import CommentsSchema from '/lib/schema/comments';
 
-const CreateComment = ({create, errors, postId, submitted}) => (
+const CreateComment = ({create, errors, postId}) => (
   <div>
     <h2>Add New Post</h2>
     <ReactAutoForm
@@ -22,8 +22,7 @@ const CreateComment = ({create, errors, postId, submitted}) => (
 CreateComment.propTypes = {
   errors: React.PropTypes.array,
   create: React.PropTypes.func.isRequired,
-  postId: React.PropTypes.string.isRequired,
-  submitted: React.PropTypes.bool
+  postId: React.PropTypes.string.isRequired
 };
 
 export default CreateComment;
