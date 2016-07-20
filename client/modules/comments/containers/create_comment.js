@@ -5,8 +5,9 @@ import Component from '../components/create_comment';
 
 export const composer = ({context, clearErrors}, onData) => {
   const {LocalState} = context();
-  const error = LocalState.get('CREATE_COMMENT_ERROR');
-  onData(null, {error});
+  const errors = LocalState.get('CREATE_COMMENT_ERROR');
+  const submitted = LocalState.get('CREATE_COMMENT_SUBMITTED');
+  onData(null, {errors, submitted});
 
   return clearErrors;
 };
