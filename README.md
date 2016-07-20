@@ -1,6 +1,9 @@
-## A Sample Blog App Written in Mantra
+## Mantra Sample Blog [with Autoform]
+This repo is a fork of the Mantra Sample Blog application with the required changes to turn it into an application which uses [aldeed:SimpleSchema](https://github.com/aldeed/meteor-simple-schema) and [Aluminati:meteor-react-autoform](https://github.com/Aluminati/meteor-react-autoform).
 
-This is a sample blog app written in [Mantra](https://github.com/kadirahq/mantra) covering core features of it.
+If you are unfamiliar with Mantra specification I strongly recommend checking out the [original sample](https://github.com/mantrajs/mantra-sample-blog-app) app and the [Mantra specification](https://github.com/kadirahq/mantra) itself.
+
+To find out what changes were done to the application to transfer it from a manual forum app to an autoform app please [review the commits](https://github.com/MechJosh0/mantra-sample-blog-app/commits/master).
 
 ### Setting Up
 
@@ -12,31 +15,3 @@ This is a sample blog app written in [Mantra](https://github.com/kadirahq/mantra
 
 Simply start your app with `meteor -p 5005`. 
 Then you can access the app on <http://localhost:5005>
-
-### Running Tests
-
-In this app, every part of the client side is fully tested using the familiar tools like Mocha, Chai and Sinon.
-
-Run tests with:
-
-```
-npm test
-```
-
-**See package.json for more information about testing setup.**
-
-### Running Storybook
-
-This app is setup for [React Storybook](https://github.com/kadirahq/react-storybook). Run following command to start the React Storybook:
-
-```
-npm run storybook
-```
-
-> **NOTE:** If this gives you missing module errors, React Storybook requires npm v3. Here's how to install npm3 and get it setup.
-> ```js
-> npm install -g npm@3.8.5
-> rm -rf node_modules
-> npm install
-> npm run storybook
-> ```
