@@ -7,6 +7,7 @@ export default function ({Meteor, Collections}) {
       check(forumFields, Object);
 
       forumFields.createdAt = new Date();
+      forumFields.saving = true;
 
       Collections.Posts.insert({_id, ...forumFields});
     }
