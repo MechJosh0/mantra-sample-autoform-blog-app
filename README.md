@@ -3,7 +3,7 @@ This repo is a fork of the Mantra Sample Blog application with the required chan
 
 If you are unfamiliar with Mantra specification I strongly recommend checking out the [original sample](https://github.com/mantrajs/mantra-sample-blog-app) app and the [Mantra specification](https://github.com/kadirahq/mantra) itself.
 
-To find out what changes were done to the application to transfer it from a manual forum app to an autoform app please [review the commits](https://github.com/MechJosh0/mantra-sample-blog-app/commits/master).
+To find out what changes were done to the application to transfer it from a manual forum app to an autoform app please [review the commits](https://github.com/MechJosh0/mantra-sample-autoform-blog-app/commits/master).
 
 ### Setting Up
 
